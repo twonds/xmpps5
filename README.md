@@ -1,7 +1,7 @@
 <h1>Hacking s5 to be remote controlled and shared via XMPP and Strophe.js</h1>
 
 I was asked to give talks at two conferences recently. One talk was for
-POSSCON (http://posscon.org) and the other was for CREATESouth (http://createsouth.org). 
+[POSSCON](http://posscon.org) and the other was for [CREATESouth](http://createsouth.org). 
 
 The POSSCON talk was about XMPP and I like to show stuff off when doing talks. 
 First, I had a rock, paper, scissors XMPP based game to talk about but I 
@@ -26,7 +26,7 @@ NOTE: These were two great conferences and I highly recommend them.
 
 I downloaded s5 and put together the presentation normally. 
 
-Since Speeqe (http://speeqe.com) is XMPP MUC and Strophe.js I used it to embed 
+Since [Speeqe](http://speeqe.com) is XMPP MUC and Strophe.js I used it to embed 
 an XMPP MUC into the presentation. Just added an iframe next to the presentation
 content. You can see that in index.html.
 
@@ -143,10 +143,16 @@ That is it, feel free to play around with it and have fun!
 
 <h2>Resources</h2>
 
-XMPP - http://xmpp.org
-BOSH - http://xmpp.org/extensions/xep-0124.html
-PubSub - http://xmpp.org/extensions/xep-0060.html
-Strophe.js - http://code.stanziq.com/strophe
-Speeqe - http://code.stanziq.com/speeqe http://speeqe.com
-s5 - http://meyerweb.com/eric/tools/s5/
+XMPP - [http://xmpp.org](http://xmpp.org)
+
+BOSH - [http://xmpp.org/extensions/xep-0124.html](http://xmpp.org/extensions/xep-0124.html)
+
+PubSub - [http://xmpp.org/extensions/xep-0060.html](http://xmpp.org/extensions/xep-0060.html)
+
+Strophe.js - [http://code.stanziq.com/strophe](http://code.stanziq.com/strophe)
+
+Speeqe - [http://code.stanziq.com/speeqe](http://code.stanziq.com/speeqe)
+[http://speeqe.com](http://speeqe.com)
+
+s5 - [http://meyerweb.com/eric/tools/s5/](http://meyerweb.com/eric/tools/s5/)
 
