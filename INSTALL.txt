@@ -1,0 +1,11 @@
+To get this working you will need to install an xmpp server with
+PubSub support like ejabberd.
+
+You will also need BOSH support, ejabberd has BOSH support but you can
+also use Punjab. 
+
+You will need to copy config.js.dist to config.js and change the
+values to what is appropriate. 
+
+Deploy to a publish webserver or use your BOSH server and you are
+done! 

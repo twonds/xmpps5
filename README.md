@@ -7,10 +7,13 @@ The POSSCON talk was about XMPP and I like to show stuff off when doing talks.
 First, I had a rock, paper, scissors XMPP based game to talk about but I 
 thought it may end up not being interactive enough. I then thought it would be 
 cooler to embed an XMPP MUC chat room and also control the presentation via 
-XMPP. With that idea I created this hack using Strophe.js and s5 presentation 
-software. 
+XMPP. With that idea I created this hack using JQuery, Strophe.js and s5 
+presentation software. 
 
 People could follow the presentation and chat from a URL (http://thetofu.com/xmpp/). I then controlled the presentation from my iPhone for added effect.
+
+It was all done in HTML, CSS and Javascript with a BOSH connection to my XMPP
+server. 
 
 WARNING: Network latency can cause problems with the controls and lead to 
 embarassing results. :) 
@@ -103,4 +106,40 @@ control.html and control.js are the code for controlling the presentation.
 
 When you click the forward, back, or home button you will publish the page 
 number representing those pages to the PubSub node.
+
+
+For example to go "back" you click on the back button and it triggers the 
+publish event with the correct page number.
+
+<pre>
+    $('#back').bind('click', function () {
+	log("back");
+	publish(current_page - 1);
+      });
+
+</pre>
+
+And publish looks like :
+
+<pre>
+
+function publish(page) {
+  connection.pubsub.publish(connection.jid,
+			    PUBSUB_SERVER,
+			    PUBSUB_NODE,
+			    [page.toString()],
+			    log
+			    );
+  current_page = page;
+  
+}
+</pre>
+
+
+Other requirements to use this is a BOSH connection manager like Punjab and an 
+XMPP server with PubSub support like ejabberd. 
+
+That is it, feel free to play around with it and have fun! 
+
+== Resources ==
 
