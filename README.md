@@ -1,4 +1,4 @@
-<h1>Hacking s5 to be remote controlled and shared via XMPP and Strophe.js</h1>
+<h1>Hacking s5 to be remote controlled and shared via XMPP</h1>
 
 I was asked to give talks at two conferences recently. One talk was for
 [POSSCON](http://posscon.org) and the other was for [CREATESouth](http://createsouth.org). 
