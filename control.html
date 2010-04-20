@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Strophe.js Remote Presentation Example</title>
+  <script type='text/javascript'
+	  src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js'></script>
+  <script type='text/javascript'
+	  src='strophejs/strophe.js'></script>
+<script type='text/javascript'
+          src='strophejs/plugins/strophe.pubsub.js'></script>
+  <script type='text/javascript'
+	  src='control.js'></script>
+</head>
+<body>
+  <div id='login' style='text-align: center'>
+    <form name='cred'>
+      <label for='jid'>JID:</label>
+      <input type='text' id='jid' />
+      <label for='pass'>Password:</label>
+      <input type='password' id='pass' />
+      <input type='button' id='connect' value='connect' />
+    </form>
+  </div>
+  <hr />
+  <div id='control' style='text-align: center'>
+  <form name='control'>
+  <input id='back' type='button' value='&lt;'/>
+  <input id='home' type='button' value='home'/>
+  <input id='forward' type='button' value='&gt;'/>
+  </form>
+  </div>
+  <br />
+  <hr />
+  <div id='log' style='text-align: center'></div>
+
+  <br />
+  <hr />
+  <div id='debug'></div>
+</body>
+</html>

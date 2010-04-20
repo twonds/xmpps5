@@ -1,0 +1,723 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>X is for XMPP</title>
+<!-- metadata -->
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20100416" />
+<meta name="author" content="Christopher Zorn" />
+<meta name="company" content="Collecta" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/xmpp/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<script type='text/javascript'
+	  src='http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js'></script>
+<!-- Add Strophe.js -->
+<script type='text/javascript'
+          src='strophejs/strophe.js'></script>
+<!-- Add basic PubSub plugin support. -->
+<script type='text/javascript'
+          src='strophejs/plugins/strophe.pubsub.js'></script>
+<!-- S5 JS -->
+<script src="ui/xmpp/slides.js" type="text/javascript"></script>
+<!-- add Strophe client functions to allow for control -->
+<script type='text/javascript'
+          src='xmpp.js'></script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>http://thetofu.com/xmpp/</h1>
+<h2>XMPP</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+<h1>XMPP</h1>
+<h3><a href="http://thetofu.com/xmpp">http://thetofu.com/xmpp/</a></h3>
+</div>
+
+
+
+<div class="slide">
+<h1>Lets Begin</h1>
+<ul >
+<li><img width="64px" height="64px" src="tofuavatar.png" alt="tofu"/>  &lt;- <strong>Me</strong></li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Lets Begin</h1>
+<ul >
+<li><img width="64px" height="64px" src="tofuavatar.png"/>  &lt;- <strong>Me</strong></li>
+<li>About You</li>
+</ul>
+</div>
+
+<div class="slide">
+  <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+   <ul>
+    <li>eXtensible Messaging and Presence Protocol (XMPP)</li>
+   </ul>
+
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+   <ul>
+    <li>eXtensible Messaging and Presence Protocol (XMPP)</li>
+    <li>Asynchronous Real-Time Messaging</li>
+   </ul>
+
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+   <ul>
+    <li>eXtensible Messaging and Presence Protocol (XMPP)</li>
+    <li>Asynchronous Real-Time Messaging</li>
+    <li>Snippets of  XML</li>
+   </ul>
+
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+   <ul>
+    <li>eXtensible Messaging and Presence Protocol (XMPP)</li>
+    <li>Asynchronous Real-Time Messaging</li>
+    <li>Snippets of XML</li>
+    <li>Jabber</li>
+   </ul>
+</div>
+
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+<ul>
+     <li>Open Protocol - RFC 3920, 3921 </li>     
+</ul>
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+<ul>
+     <li>Open Protocol - RFC 3920, 3921 </li>     
+     <li>XEP - XMPP Extension Protocols</li>
+</ul>
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+<ul>
+     <li>Open Protocol - RFC 3920, 3921 </li>     
+     <li>XEP - XMPP Extension Protocols</li>
+     <li><a href="http://xmpp.org/extensions/">http://xmpp.org/extensions/</a></li>
+</ul>
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+<ul>
+     <li>Open Protocol - RFC 3920, 3921 </li>     
+     <li>XEP - XMPP Extension Protocols</li>
+     <li><a href="http://xmpp.org/extensions/">http://xmpp.org/extensions/</a></li>
+     <li>Decentralized (federated)</li>
+</ul>
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+<ul>
+     <li>Open Protocol - RFC 3920, 3921 </li>     
+     <li>XEP - XMPP Extension Protocols</li>
+     <li><a href="http://xmpp.org/extensions/">http://xmpp.org/extensions/</a></li>
+     <li>Decentralized (federated)</li>
+     <li>Strong security (tls)</li>
+</ul>
+</div>
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+<ul>
+     <li>Open Protocol - RFC 3920, 3921 </li>     
+     <li>XEP - XMPP Extension Protocols</li>
+     <li><a href="http://xmpp.org/extensions/">http://xmpp.org/extensions/</a></li>
+     <li>Decentralized (federated)</li>
+     <li>Strong security (tls)</li>
+     <li>Open Source</li>
+</ul>
+</div>
+
+
+<div class="slide">
+ <img src="http://upload.wikimedia.org/wikipedia/en/thumb/4/4c/XMPP_Logo.svg/200px-XMPP_Logo.svg.png" />
+<ul>
+     <li>Open Protocol - RFC 3920, 3921 </li>     
+     <li>XEP - XMPP Extension Protocols</li>
+     <li><a href="http://xmpp.org/extensions/">http://xmpp.org/extensions/</a></li>
+     <li>Decentralized (federated)</li>
+     <li>Strong security (tls)</li>
+     <li>Open Source</li>
+     <li>Open Community</li>
+</ul>
+</div>
+
+<div class="slide">
+<h1>Architecture</h1>
+<ul>
+    <li>The Web (HTTP)</li>
+</ul>
+</div>
+
+
+<div class="slide">
+<h1>Architecture</h1>
+<ul>
+    <li>The Web (HTTP)</li>
+    <li>Email</li>
+</ul>
+</div>
+
+<div class="slide">
+  <h1>XMPP Architecture</h1>
+  <ul>
+    <li>client to server</li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>XMPP Architecture</h1>
+ <ul>
+   <li>client to server</li>
+   <li>server to server</li>
+ </ul>
+
+</div>
+
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Instant Messaging</li>
+
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Instant Messaging</li>
+   <li>Google Talk, Facebook, Apple, Many others</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Mobile Apps/Geolocation</li>
+
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Mobile Apps/Geolocation</li>
+   <li>Buddycloud, Cabulous, Others</li>
+ </ul>
+
+</div>
+
+
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Video Conferencing, Shared Editing, Whiteboards</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Video Conferencing, Shared Editing, Whiteboards</li>
+   <li>Google, others</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Games</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Games</li>
+   <li>Chesspark, id Software, others</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Real-time Web Applications</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Real-time Web Applications</li>
+   <li>Insert Your Idea</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>What can you do with XMPP?</h1>
+ <ul>
+   <li>Real-time Web Applications</li>
+   <li>Insert Your Idea</li>
+   <li>This presentation!</li>
+ </ul>
+
+</div>
+
+
+<div class="slide">
+ <h1>XMPP Addressing</h1>
+ <ul>
+   <li>JID - Jabber IDentifier</li>
+
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>XMPP Addressing</h1>
+ <ul>
+   <li>JID - Jabber IDentifier</li>
+   <li>tofu@thetofu.com/presentation</li>
+ </ul>
+
+</div>
+
+
+<div class="slide">
+ <h1>XMPP Addressing</h1>
+ <ul>
+   <li>JID - Jabber IDentifier</li>
+   <li><strong>tofu</strong>@thetofu.com/presentation</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>XMPP Addressing</h1>
+ <ul>
+   <li>JID - Jabber IDentifier</li>
+   <li>tofu@<strong>thetofu.com</strong>/presentation</li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>XMPP Addressing</h1>
+ <ul>
+   <li>JID - Jabber IDentifier</li>
+   <li>tofu@thetofu.com/<strong>presentation</strong></li>
+ </ul>
+
+</div>
+
+
+<div class="slide">
+ <h1>XMPP Protocol</h1>
+ <ul>
+   <li>XML</li>
+
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>XMPP Protocol</h1>
+ <ul>
+   <li>XML</li>
+   <li>XML Streams</li>
+
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>XMPP Protocol</h1>
+ <ul>
+   <li>XML</li>
+   <li>XML Streams</li>
+   <li><b>&lt;message/&gt;</b></li>
+
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>XMPP Protocol</h1>
+ <ul>
+   <li>XML</li>
+   <li>XML Streams</li>
+   <li>&lt;message/&gt;</li>
+   <li><b>&lt;presence/&gt;</b></li>
+ </ul>
+
+</div>
+
+<div class="slide">
+ <h1>XMPP Protocol</h1>
+ <ul>
+   <li>XML</li>
+   <li>XML Streams</li>
+   <li>&lt;message/&gt;</li>
+   <li>&lt;presence/&gt;</li>
+   <li><b>&lt;iq/&gt;</b></li>
+ </ul>
+
+</div>
+
+<div class="slide">
+<h1>Streaming XML</h1>
+<pre>
+SEND: &lt;?xml version='1.0'?&gt;
+&lt;stream:stream xmlns='jabber:client'
+ xmlns:stream='http://etherx.jabber.org/streams'
+     from='thetofu.com'
+     version='1.0'&gt;
+RECV: &lt;?xml version='1.0'?&gt;
+&lt;stream:stream xmlns='jabber:client'
+ xmlns:stream='http://etherx.jabber.org/streams'
+      id='1'
+      from='thetofu.com'
+      version='1.0'&gt;
+SEND: &lt;/stream:stream&gt;
+RECV: &lt;/stream:stream&gt;
+</pre>
+</div>
+
+<div class="slide">
+<h1>presence</h1>
+
+<pre>
+ &lt;<strong>presence</strong> type=&quot;away&quot; &gt;
+      &lt;show&gt;away&lt;/show&gt;   
+      &lt;status&gt;Talking at Posscon&lt;/status&gt;   
+ &lt;/<strong>presence</strong>&gt;
+</pre>
+
+</div>
+
+<div class="slide">
+<h1>presence</h1>
+
+<pre>
+ &lt;presence <strong>type=&quot;away&quot;</strong> &gt;
+      &lt;show&gt;away&lt;/show&gt;   
+      &lt;status&gt;Talking at Posscon&lt;/status&gt;   
+ &lt;/presence&gt;
+</pre>
+
+</div>
+
+
+<div class="slide">
+<h1>presence</h1>
+
+<pre>
+ &lt;presence type=&quot;away&quot; &gt;
+     <strong>&lt;show&gt;away&lt;/show&gt;</strong>   
+      &lt;status&gt;Talking at Posscon&lt;/status&gt;   
+ &lt;/presence&gt;
+</pre>
+
+</div>
+
+
+<div class="slide">
+<h1>presence</h1>
+
+<pre>
+ &lt;presence type=&quot;away&quot; &gt;
+      &lt;show&gt;away&lt;/show&gt;   
+      <strong>&lt;status&gt;Talking at Posscon&lt;/status&gt;</strong>   
+ &lt;/presence&gt;
+</pre>
+
+</div>
+
+<div class="slide">
+<h1>message</h1>
+<pre>
+ &lt;<strong>message</strong> to=&quot;tofu@thetofu.com&quot; type=&quot;chat&quot; &gt;
+  &lt;body&gt;This is an example&lt;body&gt;  
+ &lt;<strong>/message</strong>&gt;
+</pre>
+</div>
+
+<div class="slide">
+<h1>message</h1>
+<pre>
+ &lt;message <strong>to=&quot;tofu@thetofu.com&quot;</strong> type=&quot;chat&quot; &gt;
+  &lt;body&gt;This is an example&lt;body&gt;  
+ &lt;/message&gt;
+</pre>
+</div>
+
+<div class="slide">
+<h1>message</h1>
+<pre>
+ &lt;message to=&quot;tofu@thetofu.com&quot; <strong>type=&quot;chat&quot;</strong> &gt;
+  &lt;body&gt;This is an example&lt;body&gt;  
+ &lt;/message&gt;
+</pre>
+</div>
+
+<div class="slide">
+<h1>message</h1>
+<pre>
+ &lt;message to=&quot;tofu@thetofu.com&quot; type=&quot;chat&quot; &gt;
+  <strong>&lt;body&gt;This is an example&lt;body&gt;</strong>  
+ &lt;/message&gt;
+</pre>
+</div>
+
+<div class="slide">
+<h1>iq</h1>
+<pre>
+ &lt;<strong>iq</strong> 
+    xmlns=&quot;jabber:client&quot; 
+    to=&quot;thetofu.com&quot; 
+    type=&quot;get&quot; 
+    id=&quot;4445&quot; &gt;
+  &lt;query 
+      xmlns=&quot;http://jabber.org/protocol/disco#items&quot; /&gt;   
+ &lt;/<strong>iq</strong>&gt;
+</pre>
+</div>
+
+<div class="slide">
+<h1>iq</h1>
+<pre>
+ &lt;iq 
+    xmlns=&quot;jabber:client&quot; 
+    <strong>to=&quot;thetofu.com&quot;</strong> 
+    type=&quot;get&quot; 
+    id=&quot;4445&quot; &gt;
+  &lt;query xmlns=&quot;http://jabber.org/protocol/disco#items&quot; /&gt;   
+ &lt;/iq&gt;
+</pre>
+</div>
+
+
+<div class="slide">
+<h1>iq</h1>
+<pre>
+ &lt;iq 
+    xmlns=&quot;jabber:client&quot; 
+    to=&quot;thetofu.com&quot; 
+    <strong>type=&quot;get&quot;</strong> 
+    id=&quot;4445&quot; &gt;
+  &lt;query xmlns=&quot;http://jabber.org/protocol/disco#items&quot; /&gt;   
+ &lt;/iq&gt;
+</pre>
+</div>
+
+
+<div class="slide">
+<h1>iq</h1>
+<pre>
+ &lt;iq 
+    xmlns=&quot;jabber:client&quot; 
+    to=&quot;thetofu.com&quot; 
+    type=&quot;get&quot; 
+    <strong>id=&quot;4445&quot;</strong> &gt;
+  &lt;query xmlns=&quot;http://jabber.org/protocol/disco#items&quot; /&gt;   
+ &lt;/iq&gt;
+</pre>
+</div>
+
+
+<div class="slide">
+<h1>iq</h1>
+<pre>
+ &lt;iq 
+    xmlns=&quot;jabber:client&quot; 
+    to=&quot;thetofu.com&quot; 
+    type=&quot;get&quot; 
+    id=&quot;4445&quot;>
+  &lt;query xmlns=&quot;http://jabber.org/protocol/disco#items&quot; /&gt;   
+ &lt;/iq&gt;
+</pre>
+</div>
+
+<div class="slide">
+<h1>XMPP and the Web</h1>
+<ul>
+
+<li>HTPP APIs are good</li>
+
+</ul>
+
+</div>
+
+<div class="slide">
+<h1>XMPP and the Web</h1>
+<ul>
+
+<li>HTPP APIs are good</li>
+<li>Polling sucks</li>
+
+</ul>
+
+</div>
+
+<!-- <div class="slide">
+<img src="pollingsucks.png" />
+</div>
+-->
+
+<div class="slide">
+<h1>XMPP and the Web</h1>
+<ul>
+
+<li>HTPP APIs are good</li>
+<li>Polling sucks</li>
+<li>BOSH - Bidirectional-streams Over Synchronous HTTP</li>
+
+</ul>
+
+</div>
+
+
+<div class="slide">
+<h1>XMPP and the Web</h1>
+<ul>
+
+<li>HTPP APIs are good</li>
+<li>Polling sucks</li>
+<li>BOSH - Bidirectional-streams Over Synchronous HTTP</li>
+<li>XMPP Over BOSH</li>
+
+</ul>
+
+</div>
+
+<div class="slide">
+<h1>How does this work?</h1>
+<ul>
+
+<li>HTML, CSS, Javascript</li>
+
+</ul>
+
+</div>
+
+<div class="slide">
+<h1>How does this work?</h1>
+<ul>
+
+<li>HTML, CSS, Javascript</li>
+<li>s5 - HTML Simple Slide Show</li>
+</ul>
+
+</div>
+
+<div class="slide">
+<h1>How does this work?</h1>
+<ul>
+
+<li>HTML, CSS, Javascript</li>
+<li>s5 - HTML Simple Slide Show</li>
+<li>PubSub</li>
+</ul>
+
+</div>
+
+<div class="slide">
+<h1>How does this work?</h1>
+<ul>
+
+<li>HTML, CSS, Javascript</li>
+<li>s5 - HTML Simple Slide Show</li>
+<li>PubSub</li>
+<li>BOSH</li>
+</ul>
+
+</div>
+
+<div class="slide">
+<h1>How does this work?</h1>
+<ul>
+
+<li>HTML, CSS, Javascript</li>
+<li>s5 - HTML Simple Slide Show</li>
+<li>PubSub</li>
+<li>BOSH</li>
+<li>Strophe.js</li>
+</ul>
+
+</div>
+
+
+<div class="slide">
+<div id="log" class="code" style="height:500px; overflow:scroll;">
+</div>
+</div>
+
+<div class="slide">
+<h1>Questions?</h1>
+<h4><a href="http://thetofu.com">http://thetofu.com</a></h4>
+<h4><a href="http://identi.ca/tofu">http://identi.ca/tofu</a></h4>
+<h4><a href="xmpp:tofu@thetofu.com">tofu@thetofu.com</a></h4>
+<h4><a href="http://xmpp.org">http://xmpp.org</a></h4>
+<h4>
+  <a href="xmpp:jdev@conference.jabber.org">jdev@conference.jabber.org</a>
+</h4>
+
+</div>
+
+
+</div>
+<iframe style="float:right;border: none ; overflow: hidden; width:
+	       33%; height: 540px; margin-top: 30px;" src="http://speeqe.com/room/posscon@chat.speeqe.com/?theme=iphone" id="widgetframe" scrolling="no" frameborder="0"></iframe>
+
+</body>
+</html>
