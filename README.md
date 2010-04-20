@@ -13,7 +13,8 @@ presentation software.
 People could follow the presentation and chat from a URL (http://thetofu.com/xmpp/). I then controlled the presentation from my iPhone for added effect.
 
 It was all done in HTML, CSS and Javascript with a BOSH connection to my XMPP
-server. 
+server. I used this same code in my CREATESouth presentation to talk about the
+real-time web and real-time data. 
 
 WARNING: Network latency can cause problems with the controls and lead to 
 embarassing results. :) 
