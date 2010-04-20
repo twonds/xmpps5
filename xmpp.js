@@ -1,4 +1,3 @@
-var BOSH_SERVICE = '/xmpp-httpbind'
 var connection = null;
 var ignore = true;
 var current_page = 0;
@@ -19,20 +18,25 @@ function rawOutput(data)
 }
 
 function onEvent(message) {
-  if ($(message).attr('from').match(/^pubsub.thetofu.com/)) {
+  // Only handle messages from the PubSub Server. 
+  if ($(message).attr('from').match(/^PUBSUB_SERVER/)) {
+    // Grab pubsub entry page number
     var event = $(message).children('event')
       .children('items')
       .children('item')
       .children('entry').text();
+
     if (ignore) {
       //short circuit first event
       ignore = false;
       return true;
     }
-    go_page = parseInt(event);
-    if (go_page >= 0) {
-      log(current_page);
-      log(go_page);
+
+    go_page = parseInt(event); // The event should be the current page #
+    if (go_page >= 0) { // Only handle page # events
+      // I would have liked to use goTo but the function would cause and odd
+      // jump to the home page then the correct page. So I added a bit off 
+      // logic to make it look good when transitioning pages.
       if (current_page+1 == go_page) {
 	go(1);
       } else if (current_page-1 == go_page) {
@@ -42,17 +46,22 @@ function onEvent(message) {
       }
       current_page = go_page;
     }
+    // Return true or we loose this callback.
     return true;
   }
 }
 
 function onSubscribe(sub) {
+  // Log when we are subscribed.
   log("Subscribed");
   return true;
 }
 
 function onConnect(status)
 {
+  // This function is taken from the basic example and 
+  // when we are connected we send presence and subscribe to
+  // the presentation node. 
     if (status == Strophe.Status.CONNECTING) {
 	log('Strophe is connecting.');
     } else if (status == Strophe.Status.CONNFAIL) {
@@ -67,8 +76,8 @@ function onConnect(status)
 	log('Strophe is connected.');
 	connection.send($pres());
 	connection.pubsub.subscribe(connection.jid,
-				    "pubsub.thetofu.com", 
-				    "/home/thetofu.com/tofu", 
+				    PUBSUB_SERVER,
+				    PUBSUB_NODE,
 				    [],
 				    onEvent,
 				    onSubscribe
@@ -84,7 +93,7 @@ $(document).ready(function () {
 
     
 
-    connection.connect("speeqe.com",
+    connection.connect(XMPP_SERVER,
 		       null,
 		       onConnect);
   

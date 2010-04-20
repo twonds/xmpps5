@@ -1,6 +1,16 @@
-var BOSH_SERVICE = '/xmpp-httpbind'
 var connection = null;
 var current_page = 0;
+
+function publish(page) {
+  connection.pubsub.publish(connection.jid,
+			    PUBSUB_SERVER,
+			    PUBSUB_NODE,
+			    [page.toString()],
+			    log
+			    );
+  current_page = page;
+  
+}
 
 function log(msg) 
 {
@@ -65,35 +75,17 @@ $(document).ready(function () {
 
     $('#back').bind('click', function () {
 	log("back");
-	connection.pubsub.publish(connection.jid,
-				  "pubsub.thetofu.com",
-				  "/home/thetofu.com/tofu",
-				  [(current_page-1).toString()],
-				  log
-				  );
-	current_page = current_page - 1;
+	publish(current_page - 1);
       });
 
     $('#home').bind('click', function () {
 	log("home");
-	connection.pubsub.publish(connection.jid,
-				  "pubsub.thetofu.com",
-				  "/home/thetofu.com/tofu",
-				  ["0"],
-				  log
-				  );
-	current_page = 0;
+	publish(0);
       });
 
     $('#forward').bind('click', function () {
 	log("forward");
-	connection.pubsub.publish(connection.jid,
-				  "pubsub.thetofu.com",
-				  "/home/thetofu.com/tofu",
-				  [(current_page + 1).toString()],
-				  log
-				  );
-	current_page = current_page + 1;
+	publish(current_page + 1);
       });
 
 });

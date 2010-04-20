@@ -1,0 +1,5 @@
+var BOSH_SERVICE  = '/xmpp-httpbind';
+var XMPP_SERVER   = 'example.com'; // Change this to a real server
+var PUBSUB_SERVER = 'pubsub.example.com'; // Change this to a real pubsub service
+var PUBSUB_NODE   = 'presentation';
+ 
