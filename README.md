@@ -1,4 +1,4 @@
-== Hacking s5 to be remote controlled and shared via XMPP and Strophe.js ==
+<h1>Hacking s5 to be remote controlled and shared via XMPP and Strophe.js</h1>
 
 I was asked to give talks at two conferences recently. One talk was for
 POSSCON (http://posscon.org) and the other was for CREATESouth (http://createsouth.org). 
@@ -22,7 +22,7 @@ WARNING: This is a good simple example and hack but not a complete project.
 
 NOTE: These were two great conferences and I highly recommend them.
 
-== How did I do it? == 
+<h2>How did I do it?</h2>
 
 I downloaded s5 and put together the presentation normally. 
 
@@ -141,5 +141,12 @@ XMPP server with PubSub support like ejabberd.
 
 That is it, feel free to play around with it and have fun! 
 
-== Resources ==
+<h2>Resources</h2>
+
+XMPP - http://xmpp.org
+BOSH - http://xmpp.org/extensions/xep-0124.html
+PubSub - http://xmpp.org/extensions/xep-0060.html
+Strophe.js - http://code.stanziq.com/strophe
+Speeqe - http://code.stanziq.com/speeqe http://speeqe.com
+s5 - http://meyerweb.com/eric/tools/s5/
 
