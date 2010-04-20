@@ -18,8 +18,10 @@ function rawOutput(data)
 }
 
 function onEvent(message) {
+  var server = "^"+PUBSUB_SERVER.replace(/\./g, "\\.");
+  var re = new RegExp(server);
   // Only handle messages from the PubSub Server. 
-  if ($(message).attr('from').match(/^PUBSUB_SERVER/)) {
+  if ($(message).attr('from').match(re)) {
     // Grab pubsub entry page number
     var event = $(message).children('event')
       .children('items')
@@ -46,10 +48,11 @@ function onEvent(message) {
       }
       current_page = go_page;
     }
-    // Return true or we loose this callback.
-    return true;
   }
+  // Return true or we loose this callback.
+  return true;
 }
+
 
 function onSubscribe(sub) {
   // Log when we are subscribed.
